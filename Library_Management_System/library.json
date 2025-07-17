@@ -1,0 +1,14 @@
+{
+    "books": [
+        {
+            "id": "001",
+            "title": "De_men"
+        }
+    ],
+    "users": [
+        "Oanh"
+    ],
+    "lending": {
+        "001": "Oanh"
+    }
+}

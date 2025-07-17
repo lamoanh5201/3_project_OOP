@@ -1,0 +1,2 @@
+Hello Oanh!
+Welcome to file handling in Python.

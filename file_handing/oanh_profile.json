@@ -1,0 +1,10 @@
+{
+    "Name": "Oanh",
+    "Age": 22,
+    "School": "HUST",
+    "Skills": [
+        "Python",
+        "Machine Learning",
+        "Testing"
+    ]
+}
