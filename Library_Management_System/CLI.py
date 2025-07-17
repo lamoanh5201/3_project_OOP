@@ -21,33 +21,33 @@ class Library:
 
     def add_book(self, book_id, title):
         if book_id in [b["id"] for b in self.data["books"]]:
-            print("⚠️ Book already exists.")
+            print("Book already exists.")
         else:
             self.data["books"].append({"id": book_id, "title": title})
-            print(f"✅ Book '{title}' added successfully.")
+            print(f"Book '{title}' added successfully.")
 
     def register_user(self, name):
         if name in self.data["users"]:
-            print("⚠️ User already exists.")
+            print("User already exists.")
         else:
             self.data["users"].append(name)
-            print(f"✅ User '{name}' registered successfully.")
+            print(f"User '{name}' registered successfully.")
 
     def lend_book(self, user, book_id):
         if book_id in self.data["lending"]:
-            print("❗ Book is already lent out.")
+            print("Book is already lent out.")
         elif book_id not in [b["id"] for b in self.data["books"]]:
-            print("❌ Book does not exist.")
+            print("Book does not exist.")
         else:
             self.data["lending"][book_id] = user
-            print(f"📚 '{user}' has borrowed book ID '{book_id}'.")
+            print(f"'{user}' has borrowed book ID '{book_id}'.")
 
     def return_book(self, user, book_id):
         if self.data["lending"].get(book_id) == user:
             del self.data["lending"][book_id]
-            print(f"🔁 '{user}' has returned book ID '{book_id}'.")
+            print(f"'{user}' has returned book ID '{book_id}'.")
         else:
-            print("❌ Cannot return the book.")
+            print("Cannot return the book.")
 
     def show_lending(self):
         if not self.data["lending"]:
